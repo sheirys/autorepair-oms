@@ -1,0 +1,15 @@
+[Unit]
+Description=Axis service
+
+[Service]
+ExecStart=/usr/bin/axisd
+WorkingDirectory=/var/lib/axisd
+Restart=always
+RestartSec=5
+StartLimitIntervalSec=30
+StartLimitBurst=5
+
+
+[Install]
+WantedBy=multi-user.target
+
